@@ -13,3 +13,14 @@ export const fetchCharacters = async (): Promise<Character[]> => {
     }
 };  
 
+export const fetchCharacterById = async (id: number): Promise<Character> => {
+    try {
+        const response = await fetch(`${API_URL}/character/${id}`);
+        const data: Character = await response.json();
+        
+        return data;
+    } catch (error) {
+        
+        throw error;
+    }
+};
