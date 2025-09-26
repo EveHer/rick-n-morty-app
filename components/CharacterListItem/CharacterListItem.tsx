@@ -10,11 +10,10 @@ type CharacterListItemProps = {
 
 export const CharacterListItem = React.memo(({ character }: CharacterListItemProps) => {
     return (
-        <Link href={`/character/${character.id}`} asChild>
+        // <Link href={`/character/${character.id}`} asChild>
+        <Link href={`/${character.id}`} asChild>
             <Pressable
-                style={({ pressed }) => [
-                    styles.itemContainer,,
-                ]}
+                style={ styles.itemContainer }
             >
                 <Image source={{ uri: character.image }} style={ styles.itemImage} />
                 <View style={ styles.itemTextContainer }>
