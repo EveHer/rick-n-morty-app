@@ -14,7 +14,7 @@ export const useCharacters = () => {
                 const fetchedCharacters = await fetchCharacters();
                 setCharacters(fetchedCharacters);
             } catch (err) {
-                setError("Failed to fetch characters");
+                setError("Failed to fetch characters.");
             } finally {
                 setLoading(false);
             }

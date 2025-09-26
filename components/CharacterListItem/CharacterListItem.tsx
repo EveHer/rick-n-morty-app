@@ -13,8 +13,7 @@ export const CharacterListItem = React.memo(({ character }: CharacterListItemPro
         <Link href={`/character/${character.id}`} asChild>
             <Pressable
                 style={({ pressed }) => [
-                    styles.itemContainer,
-                    pressed && styles.pressedItem,
+                    styles.itemContainer,,
                 ]}
             >
                 <Image source={{ uri: character.image }} style={ styles.itemImage} />

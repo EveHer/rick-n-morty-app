@@ -2,9 +2,11 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     itemContainer: {
-        flex: 1,
-        backgroundColor: '#f0f0f0',
-        padding: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 12,
+        marginVertical: 6,
+        marginHorizontal: 12,
     },
     listContentContainer: {
         paddingBottom: 20,
@@ -12,6 +14,7 @@ export const styles = StyleSheet.create({
     itemImage: {
         width: 100,
         height: 100,
+        borderRadius: 16,
     },
     itemTextContainer: {
         flex: 1,
@@ -26,5 +29,4 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         color: '#666',
     },
-
 }); 
