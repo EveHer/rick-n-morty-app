@@ -1,3 +1,4 @@
+import { CharacterList } from "@/components/CharacterList/CharacterList";
 import { useCharacters } from "@/hooks/useCharacters";
 import React from "react";
 import { Text, View } from "react-native";
@@ -11,7 +12,15 @@ export default function Index() {
         <Text>Loading...</Text>
       </View>
     );
-  
-
   }
+
+  if (error) {
+    return (
+      <View>
+        <Text>Error: {error}</Text>
+      </View>
+    );
+  }
+
+  return <CharacterList characters={characters} />;
 }
